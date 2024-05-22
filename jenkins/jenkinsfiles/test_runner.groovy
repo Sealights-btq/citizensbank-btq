@@ -225,7 +225,7 @@ pipeline {
                       "executionType": "testsonly",
                       "tokenFile": "./sltoken.txt",
                       "createBuildSessionId": false,
-                      "testStage": "Cucmber framework java ",
+                      "testStage": "Cucumber framework java ",
                       "runFunctionalTests": true,
                       "labId": "${params.SL_LABID}",
                       "proxy": null,
