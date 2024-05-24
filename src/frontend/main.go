@@ -169,7 +169,7 @@ func initTracing(log logrus.FieldLogger, ctx context.Context, svc *frontendServe
 		ctx,
 		otlptracegrpc.WithGRPCConn(svc.collectorConn))
 	if err != nil {
-		log.Warnf("warn: Failed to create trace exporter: %v", err)
+		log.Warnf("warn: Failed to create trace exporter for error: %v", err)
 	}
 	tp := sdktrace.NewTracerProvider(
 		sdktrace.WithBatcher(exporter),
