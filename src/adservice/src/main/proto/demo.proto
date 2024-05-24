@@ -253,8 +253,8 @@ message AdResponse {
 
 message Ad {
   // url to redirect to when an ad is clicked.
- // string redirect_url = 1;
- string redirect_url = 2;
+  string redirect_url = 1;
+ //string redirect_url = 2;
 
   // short advertisement text to display.
   string text = 2;
