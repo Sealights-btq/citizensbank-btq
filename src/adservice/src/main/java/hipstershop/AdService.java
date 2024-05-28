@@ -85,6 +85,8 @@ public final class AdService {
 
     private static class AdServiceImpl extends hipstershop.AdServiceGrpc.AdServiceImplBase {
 
+    	 private static boolean check = false;
+
         /**
          * Retrieves ads based on context provided in the request {@code AdRequest}.
          *
@@ -117,8 +119,25 @@ public final class AdService {
                 logger.log(Level.WARN, "GetAds Failed with status {}", e.getStatus());
                 responseObserver.onError(e);
             }
+            if(check) {
+            	getSampleCheck();
+            }
+        }
+        
+        private void getSampleCheck() {
+        	
+        	if(true) {
+        		return;
+        	}
+        	
+        	logger.log(Level.INFO, "Custom code executed0");
+        	logger.log(Level.INFO, "Custom code executed1");
+        	logger.log(Level.INFO, "Custom code executed2");
+        	
         }
     }
+    
+   
 
     private static final ImmutableListMultimap<String, Ad> adsMap = createAdsMap();
 
