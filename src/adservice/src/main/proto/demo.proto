@@ -42,6 +42,10 @@ message GetCartRequest {
   string user_id = 1;
 }
 
+message GetCartRequest_test {
+  string user_id_test = 10;
+}
+
 message Cart {
   string user_id = 1;
   repeated CartItem items = 2;
